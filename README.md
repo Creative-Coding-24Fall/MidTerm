@@ -71,4 +71,4 @@ I would also like to experiment with dynamic backgrounds or changing colors insp
 
 This might be a little challenging but I'm consider adding ancient Chinese calligraphy strokes that appear as the user clicks, forming parts of Wushuang’s name, and then disappearing again, symbolizing her elusive nature.
 
-
+![sketch and inspo](./search for ws_sketch.jpg)

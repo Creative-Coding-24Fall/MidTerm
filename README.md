@@ -1,4 +1,13 @@
 
+Oct 28th
+
+
+
+
+
+
+
+0ct 21st
 The book I'm choosing is 'Search for Wu Shuang' by Xiaobo Wang. I have recently reread it after my first read several years ago. I share the same name as the character that the main character is searching for throughtout the book. Which makes the book particularly clso to me at heart.
 
 The book is set in Tang Dynasty. I would love to include Tang dynasty architecture elements in the design. 
@@ -11,6 +20,6 @@ I would also like to experiment with dynamic backgrounds or changing colors insp
 
 This might be a little challenging but I'm consider adding ancient Chinese calligraphy strokes that appear as the user clicks, forming parts of Wushuang’s name, and then disappearing again, symbolizing her elusive nature.
 
-![sketch and inspo](./search for ws_sketch.jpg)
+![sketch and inspo](./searchforws_sketch.jpg)
 
 I'm to sure wht the image is not showing but I upload the file!

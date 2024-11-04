@@ -1,4 +1,12 @@
 
+Nov 4th
+
+1.Give the snow random size, opacity and speed.
+2.Changed the font of the book title to a Tang dynasty caligraphy style
+3.testing the colors for the text, circle and the architecture.
+
+
+
 Oct 28th
 
 

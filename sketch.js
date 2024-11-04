@@ -3,10 +3,14 @@ let imgState = false;
 let imgX, imgY;
 let imgAlpha = 0;
 let snowX = [ ], snowY = [ ];
+let snowSize = [ ]
+let snowAlpha = [ ]
+let snowSpeed = [ ]
+
 
 function preload() {
-  img = loadImage ("download.jpg");
-  font = loadFont ("方正字迹-邱氏粗瘦金书简体.TTF");
+  img = loadImage ("girl.png");
+  font = loadFont ("C023-邯郸(唐)欧阳询千字文.otf");
 }
 
 
@@ -16,47 +20,51 @@ function setup() {
  angleMode(DEGREES); 
 
 //snow
- for(let i=0;i<100;i++){            
+ for(let i = 0; i < 100; i++) {            
     snowX [i] = random(width);
     snowY [i] = random(height);
+    snowSize[i] = int(random(5,8));
+    snowAlpha[i] = random(100, 230)
+    snowSpeed [i] = random(1,3)
  }
 }
 
 function draw() {
   background(0);
-
-//circle
-  fill(220,140,50);                   
-  ellipse(width/2, height/2, 600);
  
+//circle
+  fill(183, 88, 72);                   
+  ellipse(width/2, height/2, 580);
+  
+//girl silhoutte
+  imageMode(CENTER);
+  
+  if(imgState){                     
+  tint(255, imgAlpha);
+  image(img, width/2 + 50, height/2 +80, 450, 600);
+  if(imgAlpha > 0) {                     
+    imgAlpha -= 0.8;
+    }
+  }
+
 //building
   building();                          
 
 //title
-  textSize(100);                        
+  textSize(140);                        
   textAlign(CENTER, CENTER);
   fill(144, 174, 193);
   noStroke();
-  text("寻找无双", width/2, 100);
-
-//girl silhoutte
-  imageMode(CENTER);
-
-  if(imgState){                     
-  tint(255, imgAlpha);
-  image(img, imgX, imgY);
-  if(imgAlpha > 0) {                   
-    imgAlpha -= 3;
-    }
-  }
+  text("寻找无双", width/2-10, 100);
 
  //snow
-  fill(255,200);                        
+                      
   noStroke();
 
   for(let i=0;i<100;i++){
-  ellipse(snowX[i], snowY[i], 5);
-  snowY[i] += 2;
+  fill(255,snowAlpha[i]);    
+  ellipse(snowX[i], snowY[i], snowSize[i]);
+  snowY[i] += snowSpeed[i];
    if(snowY[i] > height){
     snowY[i] = 0;
    }
@@ -71,31 +79,41 @@ function building(){
 
 //roof
  fill(144, 174, 193)
- quad(0, 250, 150, 250, 200, 350, 0, 350);
+ quad(0, 260, 130, 260, 200, 350, 0, 350);
  quad(0, 400, 150, 400, 250, 500, 0, 500);
 
 //body
- fill(173, 63, 32);
+
+ fill(255, 254, 239,220);
  rect(0, 350, 150, 50);
 
- fill(95, 62, 43)
+ fill(255, 254, 239, 220)
  rect(0, 500, 200, 300);
 
-//window line
- strokeWeight(6)
- fill(182, 103, 80)
- stroke(0, 150);
- for(let x = 0; x < 200; x += 40){ 
-  line(x, 505, x, height - 5);
- }
-  line(3, 560, 195, 560);
+//window line/pillar
 
+// strokeWeight(10);
+ fill(183, 88, 72);
+ rect()
+ stroke(183, 88, 72, 250);
+
+ noStroke();
+ rect(146,350,8,50)
+
+ for(let x = 0; x < 230; x += 65){ 
+  rect(x, 502, 8, height - 5);
+ }
+  rect(3, 600, 195, 8);
+  
 //roof lines
+strokeWeight(6)
  fill(59, 84, 99)
  stroke(180,150)
- for(let x = 0; x < 150; x += 10){ 
-  line(x, 250, x/0.75, 350);
-  line(x, 400, x/0.6, 500);
+ for(let x = 0; x < 140; x += 13){ 
+  line(x-5, 262, x/0.70, 353);
+ }
+ for(let x = 0; x < 150; x += 13){ 
+  line(x-5, 402, x/0.6, 503);
  }
 }
 

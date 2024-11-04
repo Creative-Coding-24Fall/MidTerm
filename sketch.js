@@ -94,26 +94,31 @@ function building(){
 
 // strokeWeight(10);
  fill(183, 88, 72);
- rect()
+ 
  stroke(183, 88, 72, 250);
 
  noStroke();
  rect(146,350,8,50)
 
- for(let x = 0; x < 230; x += 65){ 
+ for(let x = -2; x < 230 ; x += 65){ 
   rect(x, 502, 8, height - 5);
  }
-  rect(3, 600, 195, 8);
+
+  rect(3, 600, 195, 6);
+ 
+
   
 //roof lines
-strokeWeight(6)
+
+
+ strokeWeight(6)
  fill(59, 84, 99)
  stroke(180,150)
- for(let x = 0; x < 140; x += 13){ 
-  line(x-5, 262, x/0.70, 353);
+ for(let x = -10; x < 135; x += 13){ 
+  line(x, 262, x/0.70, 353);
  }
- for(let x = 0; x < 150; x += 13){ 
-  line(x-5, 402, x/0.6, 503);
+ for(let x = -10 ; x < 150; x += 13){ 
+  line(x, 403, x/0.6, 503);
  }
 }
 
@@ -123,10 +128,10 @@ function mousePressed(){
     imgState = true;
     // imgX=random(width)
     // imgY=random(height)
-    let rad = random(240);
-    let angle = random(360);
-imgX = cos(angle) * rad + width/2;
-imgY = sin(angle) * rad + height/2;
+    // let rad = random(240);
+    // let angle = random(360);
+    // imgX = cos(angle) * rad + width/2;
+    // imgY = sin(angle) * rad + height/2;
     imgAlpha = 255;
   }
 }
